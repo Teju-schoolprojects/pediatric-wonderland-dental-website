@@ -487,7 +487,6 @@ a {
 }
 
 .step-icon {
-  font-size: 3.5rem;
   background: white;
   width: 90px;
   height: 90px;
@@ -496,6 +495,15 @@ a {
   justify-content: center;
   border-radius: 50%;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid rgba(255, 140, 122, 0.15);
+}
+
+.step-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .step-text h3 {

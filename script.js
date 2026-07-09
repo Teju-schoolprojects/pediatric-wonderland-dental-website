@@ -45,22 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
     1: {
       title: "Step 1: The Magic Playroom",
       desc: "Instead of a scary waiting room, children arrive in our sunny playroom filled with soft toys, cloud mobiles, and coloring books. We let them relax, play, and get comfortable with our environment before any checkup begins.",
-      icon: "🧸"
+      icon: "assets/journey_playroom.jpg"
     },
     2: {
       title: "Step 2: The Cozy Chair",
       desc: "Our dental chairs are super-soft and sized just for kids. We show them the 'magic tools' before starting, explaining things like our magnifying mirror that looks for hidden treasure. Kids get to choose a movie to watch on our ceiling screens!",
-      icon: "🛋️"
+      icon: "assets/journey_cozy_chair.jpg"
     },
     3: {
       title: "Step 3: The Sparkle Clean",
       desc: "We use a tickle-cleaning brush with sweet, kid-approved toothpaste flavors. The cleaning process is gentle and interactive, showing them how we polish away sugar bugs to make their teeth shine like stars.",
-      icon: "✨"
+      icon: "assets/journey_sparkle_clean.jpg"
     },
     4: {
       title: "Step 4: The Treasure Chest",
       desc: "At the end of every visit, children receive a golden coin to unlock our magical Treasure Chest! They can choose a reward toy, high-five Cozy the Tooth, and leave the clinic with a proud, shining smile.",
-      icon: "🎁"
+      icon: "assets/journey_treasure_chest.jpg"
     }
   };
 
@@ -81,8 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         stepTitle.textContent = data.title;
         stepDesc.textContent = data.desc;
-        const iconDiv = stepCard.querySelector('.step-icon');
-        iconDiv.textContent = data.icon;
+        const imgEl = stepCard.querySelector('#step-img');
+        imgEl.src = data.icon;
+        imgEl.alt = data.title;
         
         stepCard.style.opacity = '1';
         stepCard.style.transform = 'translateY(0)';
