@@ -1,0 +1,15 @@
+# Windows image cache
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Folder config file
+[Dd]esktop.ini
+
+# OS metadata
+.DS_Store
+.DS_Store?
+._*
+
+# Log files
+*.log

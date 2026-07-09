@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Wonderland — Dental Clinic for Little Smiles</title>
+  <meta name="description" content="Welcome to Pediatric Wonderland, a magical and cozy pediatric dental clinic designed to make children feel safe, happy, and comfortable.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Navigation -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.5 2 7 4.5 7 7.5C7 10.5 8.5 12 12 12C15.5 12 17 10.5 17 7.5C17 4.5 15.5 2 12 2Z" fill="#FF8C7A"/>
+          <path d="M12 12C8.5 12 6 13.5 6 16.5C6 19.5 8.5 22 12 22C15.5 22 18 19.5 18 16.5C18 13.5 15.5 12 12 12Z" fill="#7CBEE0"/>
+          <path d="M12 9.5C12.8284 9.5 13.5 8.82843 13.5 8C13.5 7.17157 12.8284 6.5 12 6.5C11.1716 6.5 10.5 7.17157 10.5 8C10.5 8.82843 11.1716 9.5 12 9.5Z" fill="white"/>
+        </svg>
+        <span class="logo-text">Pediatric <span>Wonderland</span></span>
+      </a>
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#journey" class="nav-link">Our Journey</a>
+        <a href="#playroom" class="nav-link">Playroom Tour</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#mascot" class="nav-link">Meet Cozy</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="btn btn-secondary nav-cta">Book a Visit</a>
+      </nav>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-sparkles"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge">✨ Welcome to a Dental Adventure</span>
+        <h1>Where Little Smiles Find <span>Magical Care</span></h1>
+        <p class="hero-description">
+          Welcome to a dental space designed to feel like a cozy, sunny playroom. We turn routine checkups into a playful adventure filled with gentle smiles, soft clouds, and happy teeth.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book Magical Visit</a>
+          <a href="#playroom" class="btn btn-outline">Explore the Room <i class="fa-solid fa-circle-play"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="image-wrapper">
+          <img src="assets/hero_tooth.jpg" alt="Smiling plush tooth in a cozy sunny room" class="hero-img">
+          <!-- Floating decoration elements in CSS style matching the prompt image -->
+          <div class="floating-bubble bubble-1">🦷</div>
+          <div class="floating-bubble bubble-2">☁️</div>
+          <div class="floating-bubble bubble-3">⭐</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Journey Section -->
+  <section id="journey" class="journey-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">🗺️ The Visit Path</span>
+        <h2>Your Child's Magical Journey</h2>
+        <p>We've reimagined the dental visit as a fun board game. Click the steps to see how we guide your little one!</p>
+      </div>
+
+      <div class="journey-map-wrapper">
+        <!-- Interactive Game Map Path -->
+        <div class="journey-map-line"></div>
+        <div class="journey-steps">
+          <div class="journey-step active" data-step="1">
+            <div class="step-num">1</div>
+            <h3>The Playroom</h3>
+            <p>Waiting area</p>
+          </div>
+          <div class="journey-step" data-step="2">
+            <div class="step-num">2</div>
+            <h3>The Cozy Chair</h3>
+            <p>Comfort checkup</p>
+          </div>
+          <div class="journey-step" data-step="3">
+            <div class="step-num">3</div>
+            <h3>Sparkle Clean</h3>
+            <p>Gentle cleaning</p>
+          </div>
+          <div class="journey-step" data-step="4">
+            <div class="step-num">4</div>
+            <h3>Treasure Chest</h3>
+            <p>Fun rewards</p>
+          </div>
+        </div>
+
+        <!-- Detail display for the active step -->
+        <div class="step-detail-card" id="step-detail-card">
+          <div class="step-detail-content">
+            <div class="step-icon">🧸</div>
+            <div class="step-text">
+              <h3 id="step-title">Step 1: The Magic Playroom</h3>
+              <p id="step-desc">Instead of a scary waiting room, children arrive in our sunny playroom filled with soft toys, cloud mobiles, and coloring books. We let them relax, play, and get comfortable with our environment before any checkup begins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Playroom Tour Section -->
+  <section id="playroom" class="playroom-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">🧸 Tour Our Space</span>
+        <h2>Explore Our Cozy Clinic</h2>
+        <p>Hover over the pulsing hotspots in our playroom waiting area to see how we design every corner for your child's comfort.</p>
+      </div>
+
+      <div class="playroom-interactive-container">
+        <img src="assets/playroom_isometric.jpg" alt="Isometric view of Pediatric Wonderland Waiting Room" class="playroom-img">
+        
+        <!-- Hotspots -->
+        <div class="hotspot" style="top: 40%; left: 35%;" data-tooltip="Cloud Mobiles: Floating paper clouds hang above, keeping little eyes looking up at calm shapes during checkups.">
+          <span class="hotspot-pulse"></span>
+        </div>
+        <div class="hotspot" style="top: 55%; left: 16%;" data-tooltip="Toy Shelves: Fully stocked bookshelves and plush bears to encourage play and take away waiting anxiety.">
+          <span class="hotspot-pulse"></span>
+        </div>
+        <div class="hotspot" style="top: 75%; left: 24%;" data-tooltip="Comfy Mini-Armchairs: Cozy pastel chairs sized perfectly for kids to feel right at home.">
+          <span class="hotspot-pulse"></span>
+        </div>
+        <div class="hotspot" style="top: 62%; left: 51%;" data-tooltip="Plush Tooth Mascot: Cozy our plush mascot is always around for comforting hugs and brushing lessons.">
+          <span class="hotspot-pulse"></span>
+        </div>
+        
+        <!-- Dynamic Tooltip -->
+        <div class="playroom-tooltip" id="playroom-tooltip">
+          Hover over a point to reveal playroom secret!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">🦷 Magic Services</span>
+        <h2>Our Gentle Dental Care</h2>
+        <p>Creating healthy smile habits with state-of-the-art dental services tailored uniquely for kids.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="service-svg-icon">
+              <!-- Tooth icon -->
+              <path d="M50 15 C30 15 25 35 25 50 C25 65 30 75 40 85 C45 90 48 85 50 80 C52 85 55 90 60 85 C70 75 75 65 75 50 C75 35 70 15 50 15 Z" fill="#FF8C7A"/>
+              <path d="M50 25 C38 25 35 40 35 50 C35 60 38 68 45 74 C47 76 48 74 50 71 C52 74 53 76 55 74 C62 68 65 60 65 50 C65 40 62 25 50 25 Z" fill="white" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3>First Dental Visit</h3>
+          <p>A fun, zero-pressure orientation visit to get children familiar with our friendly staff and cozy instruments.</p>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="service-svg-icon">
+              <!-- Toothbrush & Sparkles -->
+              <rect x="35" y="10" width="10" height="70" rx="5" fill="#FF8C7A" transform="rotate(-45 40 45)"/>
+              <path d="M22 18 C22 18 15 25 20 30 C25 35 32 28 32 28" stroke="#FF8C7A" stroke-width="8" stroke-linecap="round"/>
+              <polygon points="65,15 70,30 85,35 70,40 65,55 60,40 45,35 60,30" fill="#FFE5A3"/>
+            </svg>
+          </div>
+          <h3>Sparkle Cleanings</h3>
+          <p>Gentle plaque polishing with yummy, kid-approved toothpaste flavors (bubblegum, strawberry, and watermelon!).</p>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="service-svg-icon">
+              <!-- Shield / Protection Dome -->
+              <path d="M50 15 C30 15 20 25 20 50 C20 70 35 85 50 90 C65 85 80 70 80 50 C80 25 70 15 50 15 Z" fill="#FF8C7A" opacity="0.3"/>
+              <path d="M50 25 C35 25 30 33 30 50 C30 63 42 75 50 78 C58 75 70 63 70 50 C70 33 65 25 50 25 Z" fill="#FF8C7A"/>
+            </svg>
+          </div>
+          <h3>Cavity Shielding</h3>
+          <p>Ultrathin, protective dental sealants and sweet fluoride treatments to lock out cavity-causing sugars.</p>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="service-svg-icon">
+              <!-- Heart Balloon -->
+              <path d="M50 75 C50 75 20 55 20 35 C20 20 35 15 50 30 C65 15 80 20 80 35 C80 55 50 75 50 75 Z" fill="#FF8C7A"/>
+              <path d="M50 75 L50 95" stroke="#FF8C7A" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Comfort-First Care</h3>
+          <p>For nervous children, we offer comforting weighted blankets, positive distraction screens, and gentle sleep options.</p>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="service-svg-icon">
+              <!-- Teddy bear ears silhouette holding tooth -->
+              <circle cx="35" cy="30" r="15" fill="#FF8C7A"/>
+              <circle cx="65" cy="30" r="15" fill="#FF8C7A"/>
+              <circle cx="50" cy="55" r="30" fill="#FF8C7A"/>
+              <circle cx="50" cy="55" r="20" fill="white" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3>Growth Watching</h3>
+          <p>Carefully tracking early jaw development and tooth eruption patterns to guide straight, healthy smiles.</p>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="service-svg-icon">
+              <!-- Crown Tooth -->
+              <path d="M50 35 C35 35 30 50 30 65 C30 75 35 85 45 92 C47 94 48 92 50 89 C52 92 53 94 55 92 C65 85 70 75 70 65 C70 50 65 35 50 35 Z" fill="#FF8C7A"/>
+              <polygon points="35,30 42,42 50,25 58,42 65,30 60,50 40,50" fill="#FFE5A3"/>
+            </svg>
+          </div>
+          <h3>Royal Treatment</h3>
+          <p>From custom metal-free tooth crowns to pain-free repairs, we treat your little ones like royalty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mascot Cozy Section (Interactive) -->
+  <section id="mascot" class="mascot-section">
+    <div class="container mascot-container">
+      <div class="mascot-visual">
+        <div class="mascot-image-wrapper">
+          <img src="assets/cozy_plush_tooth.jpg" alt="Cozy the plush tooth mascot" class="mascot-img">
+        </div>
+      </div>
+      <div class="mascot-content">
+        <span class="badge">💬 Interactive Chat</span>
+        <h2>Ask Cozy the Tooth!</h2>
+        <p>I am Cozy, the official plush tooth buddy at Pediatric Wonderland! Click a question below and I will tell you a secret.</p>
+        
+        <div class="mascot-questions">
+          <button class="mascot-btn" data-answer="Brushing should be a dance! Brush twice a day for two full minutes—about the length of your favorite nursery rhyme. Make little circles on your teeth to brush away the sugar monsters!">"Cozy, how should I brush my teeth?"</button>
+          <button class="mascot-btn" data-answer="Not at all! Our tools are friendly helpers. The dental mirror is a tiny magnifying glass to find hidden treasures, and our cleaning brush is just a super-fast tickle toothbrush!">"Are the dental tools scary?"</button>
+          <button class="mascot-btn" data-answer="I love crunchy apples, sweet strawberries, and crispy carrots! They act like natural toothbrushes. Sugar bugs love candies, so I keep sweets as a rare special treat!">"What is your favorite snack?"</button>
+        </div>
+
+        <!-- Animated Text Bubble -->
+        <div class="mascot-bubble" id="mascot-bubble">
+          <div class="bubble-arrow"></div>
+          <p id="mascot-text">Hello there! Click one of the buttons above to chat with me. I can't wait to share my healthy smile secrets with you!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="cloud-divider-top"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">❤️ Parent Love</span>
+        <h2>What Parents Are Saying</h2>
+        <p>Read about the stress-free, magical dental experiences of families in our wonderland.</p>
+      </div>
+
+      <div class="testimonials-carousel-wrapper">
+        <div class="testimonials-track" id="testimonials-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"My 4-year-old was absolutely terrified of going to the dentist. The playroom waiting area calmed her down instantly. The doctor was so gentle, explaining everything as 'magical tickle tools.' She actually asked when we could go back!"</p>
+            <h4 class="parent-name">Sarah M.</h4>
+            <span class="child-info">Mother of Lily (4)</span>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Finding a dentist that accommodates sensory sensitivities is so hard. Pediatric Wonderland went above and beyond. The weighted blanket and cloud mobile distractors made the checkup stress-free. Incredibly premium service."</p>
+            <h4 class="parent-name">David K.</h4>
+            <span class="child-info">Father of Leo (6)</span>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"The game map is brilliant. My son loved marking off each step. By the time he reached the 'Treasure Chest' at the end, he was beaming. Beautiful clinic design and extremely warm staff."</p>
+            <h4 class="parent-name">Elena R.</h4>
+            <span class="child-info">Mother of Julian (7)</span>
+          </div>
+        </div>
+
+        <div class="carousel-dots" id="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+    </div>
+    <div class="cloud-divider-bottom"></div>
+  </section>
+
+  <!-- Appointment Booking Section -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <span class="badge">📅 Plan A Visit</span>
+        <h2>Begin the Magic Journey</h2>
+        <p>Ready to give your child a joyful smile? Send us an appointment request, and our booking coordinator will touch base to schedule a magical visit.</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Our Wonderland Clinic</h4>
+              <p>123 Cloud Mobile Lane, Smile City, SC 54321</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Call or Text Us</h4>
+              <p>(555) 123-WISH (9474)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Magic Hours</h4>
+              <p>Mon - Fri: 8:00 AM - 5:00 PM<br>Saturday (By Request): 9:00 AM - 1:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <form class="booking-form" id="booking-form">
+          <h3 class="form-title">Request a Magical Visit</h3>
+          
+          <div class="form-group">
+            <label for="parent-name">Parent's Name</label>
+            <input type="text" id="parent-name" placeholder="Your full name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="child-name">Child's Name</label>
+              <input type="text" id="child-name" placeholder="Child's name" required>
+            </div>
+            <div class="form-group">
+              <label for="child-age">Child's Age</label>
+              <input type="number" id="child-age" min="1" max="18" placeholder="Age" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="(555) 000-0000" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="email@address.com" required>
+            </div>
+          </div>
+
+          <!-- Interactive Child's Mood / Comfort level slider -->
+          <div class="form-group">
+            <label>Child's Comfort Level with Dentist</label>
+            <div class="mood-selector">
+              <input type="range" id="child-mood" min="1" max="4" value="3" class="mood-slider">
+              <div class="mood-labels">
+                <span class="mood-label" data-value="1">😰 Nervous</span>
+                <span class="mood-label" data-value="2">🫣 Shy</span>
+                <span class="mood-label active" data-value="3">😊 Relaxed</span>
+                <span class="mood-label" data-value="4">🚀 Excited!</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Request ✨</button>
+        </form>
+
+        <div class="form-success-overlay" id="form-success-overlay">
+          <div class="success-message">
+            <div class="success-icon">🎉</div>
+            <h3>Magical Request Received!</h3>
+            <p>We've sent a sparkle request to our booking coordinator. We will text or call you at <strong id="submitted-phone"></strong> within 24 business hours to lock in your visit.</p>
+            <button class="btn btn-outline" id="success-close-btn">Return</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Parent FAQs</h2>
+        <p>Quick answers to typical dental questions parents ask us.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">When should my child first see a dentist? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>The American Academy of Pediatric Dentistry recommends that a child should visit the dentist by their first birthday or within 6 months of their first tooth erupting. Early visits help children build comfort in the dental space and let us track development from the start.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How do you help children who are very anxious? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Our team is specially trained in pediatric behavior guidance. We use "Tell-Show-Do" techniques, speak in comforting child-friendly analogies, offer sensory items like weighted blankets, and provide positive distraction screens. We work at your child's pace and never force treatment.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What payment methods and insurances do you accept? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>We are in-network with most major PPO dental insurances. We also offer affordable self-pay pricing and flexible monthly installment plans to ensure every child gets the magical care they deserve. Contact us for a full insurance lookup!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.5 2 7 4.5 7 7.5C7 10.5 8.5 12 12 12C15.5 12 17 10.5 17 7.5C17 4.5 15.5 2 12 2Z" fill="#FF8C7A"/>
+            <path d="M12 12C8.5 12 6 13.5 6 16.5C6 19.5 8.5 22 12 22C15.5 22 18 19.5 18 16.5C18 13.5 15.5 12 12 12Z" fill="#7CBEE0"/>
+          </svg>
+          <span class="logo-text">Pediatric <span>Wonderland</span></span>
+        </div>
+        <p>Creating safe, happy, and magical dental visits that keep children smiling for a lifetime.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#journey">Journey Map</a></li>
+          <li><a href="#playroom">Playroom Tour</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#mascot">Meet Cozy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>📍 123 Cloud Mobile Lane, Smile City, SC</p>
+        <p>📞 (555) 123-9474</p>
+        <p>✉️ hello@pediatricwonderland.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Pediatric Wonderland. All rights reserved.</p>
+        <p>Designed with love for little smiles 🦷✨</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script File -->
+  <script src="script.js"></script>
+</body>
+</html>
